@@ -1,0 +1,479 @@
+- result: []
+  explanation: The post text deals with all the tagged images. But if we choose all 4, the combined result will show text that is cutoff. We need to use the more expensive Nano-Banana fallback pipeline.
+  post: |
+    Consultants are problem solvers.
+    But what kind of problems?
+
+    Case prompts fall into predictable patterns, like classic chess openings.
+
+    Profitability, market entry, mergers and acquisitions.
+    These are your bread and butter.
+
+    There are also the "unconventional" ones: estimating something bizarre, or tackling a non-business challenge.
+
+    Familiarizing yourself with these archetypes is like getting the cheat sheet for the exam.
+  image: 0.png
+
+- image: 1.png
+  result: []
+  explanation: The post text deals with all the tagged images. We can not choose all of them, because the resulting box would have the first few letters of 'Telecommunications' cut off. We need to use the Nano-Banana fallback pipeline.
+  post: |
+    When someone says "consulting," you might picture tech startups or finance giants.
+
+    But the truth is, consultants parachute into every imaginable industry.
+
+    From consumer retail and manufacturing to healthcare, energy, and even non-profits.
+
+    The problems might look different on the surface, but the underlying business logic? It's surprisingly universal.
+
+    Don't get caught off guard by a case about something you never considered.
+
+- image: 2.png
+  result: [0]
+  explanation: The post text talks about the process. There is only one image detected, and it is a good picture of the process without anything cutoff.
+  post: |
+    Some people think branding is fluff. A fancy add-on. A coat of paint.
+
+    Wrong.
+    It's a disciplined process.
+    A strategic chess match.
+
+    Branding is how you deliberately differentiate yourself, attract new customers, and forge unshakeable loyalty.
+    It's about positioning your product, service, or personal presence to be the ONLY choice.
+
+    To win, you need to stay grounded in the basics, adapt to constant change, and relentlessly seize every opportunity to be the brand.
+
+    It's not just for the Amazons of the world.
+    It's for anyone who wants to be chosen.
+
+- image: 3.png
+  result: [1, 4]
+  explanation: The post text is about a strong brand. The layout detection detected multiple images, some with captions. It correctly selected the lego example with its caption, as it is a good example of a strong brand.
+  post: |
+    Ever wonder why some companies feel irreplaceable, while others just... exist?.
+
+    It's not about magic. It's about their brand.
+
+    A brand is not just a logo, a name, or a product. It's the sum of every emotional connection, every gut feeling, every whisper of superiority a customer has about you.
+
+    In today's crowded market, a strong brand cuts through the noise. It builds trust, fosters loyalty, and makes people believe in something bigger.
+
+    What perceptions are you building right now? Because that's your brand, whether you like it or not.
+
+- image: 4.png
+  result: []
+  explanation: In this image, there are only 2 images detected although there are a lot more. It makes more sense to just cut out the bottom half region of the pdf using Nano-Banana fallback pipeline, instead of showing these 2 small images.
+  post: |
+    You know that feeling when you see a specific shade of brown and immediately think "UPS"?
+    That's brand identity doing its job.
+
+    It's the tangible stuff.
+
+    It's what you can see, touch, hold, hear, and watch move.
+
+    Colors, shapes, fonts, sounds.
+
+    These aren't random.
+
+    They're meticulously crafted to fuel recognition, amplify differentiation, and make complex ideas instantly understandable.
+
+    Without a strong identity, your big idea is just a whisper in a crowded room.
+
+    Make every sensory detail count.
+
+- image: 5.png
+  result: [1, 2]
+  explanation: |
+    The layout detection correctly identified an image with its caption.
+    It also identified the whole page as image, but this would be too big to display next to the post.
+    The image with caption [1,2] is a great example for the recognizable logo that the post is talking about.
+  post: |
+    Think your logo is just a cool picture?
+
+    It's far more potent than that.
+
+    Your brandmark is a visual shorthand, an icon designed to instantly convey your company's values, mission, or core attribute. From literal images to abstract symbols, from word-driven to purely visual.
+
+    The world of brandmarks is vast. The best ones cut through the clutter, delivering a punch of recognition and meaning in milliseconds.
+
+    It’s about finding that perfect visual language that resonates, instantly.
+
+- image: 6.png
+  result: [0, 1]
+  explanation: This is a straightforward example. The post talks about "the analytics continuum", and the only detected image (including the caption) is a graphic about it.
+  post: |
+    Ever wish your data didn't just tell you "what happened" but "what you should do"?.
+
+    It can.
+    It's called the analytics continuum.
+
+    It’s a powerful progression:
+
+    Descriptive: What happened? (Past insights)
+    Diagnostic: Why did it happen?. (Root causes)
+    Predictive: What will happen?. (Probable outcomes)
+    Prescriptive: What should I do?. (Actionable recommendations)
+    This isn't just about crunching numbers.
+    It’s about transforming raw data into strategic intelligence, moving from passive observation to automated decision-making.
+
+- image: 7.png
+  result: [0, 1]
+  explanation: Another straightforward example. The detected table (with caption) shows examples for app icons the post is talking about.
+  post: |
+    Your app icon.
+    That tiny square on a crowded phone screen.
+
+    It's not just a placeholder.
+    It's your brand's soul, distilled.
+
+    These little digital collectibles reveal who you are, what you value, and how you manage priorities.
+    From simple brandmarks to full-blown characters, every icon is a statement.
+
+    The best apps focus on one task and do it exceedingly well.
+    The easiest way to screw up an app?
+    Make it do too many things.
+
+    Make every pixel count.
+    Make it simple.
+    Make it memorable.
+
+- image: 8.png
+  result: [0]
+  explanation: Another straightforward example. The image shows a business card, which is what the post is talking about.
+  post: |
+    In a world of texts and emails, does paper still hold magic?.
+
+    Absolutely.
+    Your business card is not just contact info.
+
+    It's a rite of passage.
+    A tangible connection.
+    A moment to delight someone with your brand.
+
+    The way a business card feels sends a signal of quality and success.
+    New materials, textures, even biometrics are the future.
+
+    This isn't about being old-fashioned.
+    It's about creating a personal, memorable experience that cuts through the digital noise.
+
+- image: 9.png
+  result: []
+  explanation: The image would fit, but the text 'Utilization' is cutoff. We need to use the Nano-Banana fallback pipeline which will easily hande it.
+  post: |
+    Your client runs a factory.
+    Or a call center.
+    Or a software development team.
+
+    How do you measure how much they're getting done?
+
+    Output.
+    Rate.
+    Time.
+    Utilization.
+
+    These aren't just industrial terms.
+    They are the levers you pull to optimize efficiency, cut costs, and meet demand.
+
+    Understanding these means understanding the engine of any productive enterprise.
+
+- image: 10.png
+  result: []
+  explanation: The image would fit to the post, but the left side is cutoff. We need to use the Nano-Banana fallback pipeline which will easily hande it.
+  post: |
+    In business, it's not enough to be profitable. You need to know where you stand.
+
+    Who owns the market? Who's eating whose lunch?
+
+    Market Share and Relative Market Share are your competitive scorecards.
+
+    They tell you if you're a leader, a challenger, or a niche player.
+
+    These numbers drive strategy: aggressive growth, defensive moves, or carving out a new segment.
+
+- image: 11.png
+  result: []
+  explanation: The image is not detected correctly. The first line on top is missing, so we need to use the Nano-Banana fallback or just add the whole PDF page.
+  post: |
+    Manche denken, Buchhaltung ist Buchhaltung.
+
+    Falsch gedacht.
+
+    Es gibt einen Riesenunterschied zwischen dem, was du dem Finanzamt zeigst und dem, was du selbst wissen musst, um dein Geschäft zu führen.
+
+    Externes Rechnungswesen (FiBu) ist die offizielle Fassade, streng nach Vorschriften.
+
+    Internes Rechnungswesen (KLR) ist der Blick hinter die Kulissen, die knallharte Wahrheit für deine Entscheidungen.
+
+    Es ist der Unterschied zwischen "was die Welt sehen soll" und "was wirklich passiert".
+
+- image: 12.png
+  result: [2]
+  explanation: We correctly identified a table that illustrates some content that the post talks about, without anything cutoff.
+  post: |
+    Die Abschreibung ist das stille Verschwinden des Wertes deiner Maschinen.
+
+    Sie ist notwendig, aber auch eine Quelle für dicke Überraschungen zwischen FiBu und KLR.
+
+    Die FiBu hält sich an starre Regeln, um den Wertverlust zu zeigen.
+
+    Die KLR fragt: "Was kostet es mich WIRKLICH, diese Maschine zu nutzen, um sie später ersetzen zu können?".
+
+    Manchmal ist der FiBu-Wert zu niedrig, manchmal zu hoch.
+
+    Dieser Unterschied führt zu "Anderskosten" oder "Zusatzkosten" in deiner internen Rechnung.
+
+- image: 13.png
+  result: [0]
+  explanation: The tables were extracted correctly. 0 and 1 make sense in the context of the post, but we can only choose one of them, so we choose 0.
+  post: |
+    Deine Maschinen werden älter, nutzen sich ab.
+
+    Das ist die Abschreibung.
+
+    Die FiBu sieht das streng nach Gesetz, meist linear über die Anschaffungskosten.
+
+    Aber dein Betrieb? Der sieht den WERTVERZEHR ganz anders.
+
+    Was kostet es, diese Maschine am Ende zu ersetzen?
+
+    Der Wiederbeschaffungswert ist hier oft die Wahrheit.
+
+- image: 14.png
+  result: [1]
+  explanation: The detect image 1 is a correct illustation for the content the post is talking about.
+  post: |
+    Deine Vorkostenstellen erbringen Leistungen für andere Vorkostenstellen und Endkostenstellen.
+
+    Das ist ein komplexes Geflecht von Beziehungen.
+
+    Die Sekundärkostenverrechnung ist das Werkzeug, um dieses Chaos zu bändigen.
+
+    Sie sorgt dafür, dass die Kosten der internen Leistungen korrekt verteilt werden.
+
+    Anbauverfahren, Stufenleiterverfahren, Gleichungsverfahren.
+
+    Jedes hat seine Berechtigung und seine Eigenheiten.
+
+- image: 15.png
+  result: [0]
+  explanation: The only detected image 0 is a table that illustrates the content the post is talking about well, by showing the different german words that the post is talking about.
+  post: |
+    You've asked "Where is it?".
+    You've asked "How far is it?".
+    Now, someone is telling you: "It's behind the church," or "It's next to the bank".
+
+    These small words, prepositions, are massive for understanding directions.
+    Misunderstand one, and you might end up in front of the post office when you need to be behind it.
+
+    It's like a verbal map, using landmarks to guide you.
+    German prepositions, however, have their own quirks, including special contractions.
+
+    Let's make sure you don't end up on the roof when you're supposed to be in the cellar
+
+- image: 16.png
+  result: []
+  explanation: The only detected image is the number 4. It is quite small and is not great to display under the post, because it's just a random number. We need to use the Nano-Banana fallback pipeline.
+  post: |
+    You know how some ideas just have "it"?
+
+    That special sauce that makes them stand out?
+
+    "The Little School of Big Bravery" isn't just innovative.
+
+    It's unstoppable.
+
+    It has five key differentiators.
+
+    Each one a game-changer.
+
+    Personalized & self-driven learning.
+
+    Action-oriented & immersive experiences.
+
+    Always-on, beyond the school environment.
+
+    The entire city as a means of education.
+
+    Active involvement of the extended family.
+
+    This isn't just about being different.
+
+    It’s about being fundamentally better.
+
+- image: 17.png
+  result: []
+  explanation: The image number 3 would fit very good, as it shows a calendar (which is what the post is talking about). But inside of the bounding box there is some cutoff text, which would look bad under the post. We need to use the Nano-Banana fallback pipeline.
+  post: |
+    You know how school calendars are usually handed down, top-down?
+
+    A fixed list of events, holidays, and terms. Take it or leave it.
+
+    At "The Little School of Big Bravery," we flip that script.
+
+    The "Co-Built Calendar of Learning" is exactly what it sounds like.
+
+    All year long, families play an active role.
+
+    Setting activities. Defining the curriculum. Building the learning community.
+
+    This isn't just about input. It's about collective ownership.
+
+    A truly collaborative learning journey, shaped by everyone involved.
+
+- image: 18.png
+  result: []
+  explanation: The only detected image is just a small helper icon that would not have any value if displayed under the post. We need to use the Nano-Banana fallback pipeline.
+  post: |
+    Zwangsvollstreckung. Das klingt nach harten Bandagen.
+
+    Und das ist es auch. Es braucht einen "Titel", eine "Klausel" und eine "Zustellung".
+
+    Das ist der magische Dreiklang, der die Vollstreckungsmaschinerie in Gang setzt.
+
+    Ein Urteil ist ein Titel. Eine notarielle Urkunde auch.
+
+    Die Klausel bestätigt die Vollstreckbarkeit. Die Zustellung informiert den Schuldner.
+
+    Ohne diese drei Schritte läuft nichts. Das ist der formale Rahmen, der dich absichert oder dir Kopfschmerzen bereitet.
+
+- image: 19.png
+  result: [0]
+  explanation: The only detected image 0 doesn't provide great educational value, but it is still relevant to the post text. Also there are no other good images that would fit, so let's use this one.
+  post: |
+    Der Erblasser hat dich enterbt? Du siehst die Immobilie durch die Finger gleiten?
+
+    Nicht so schnell. Es gibt den Pflichtteil.
+
+    Das ist dein Recht auf einen Mindestanteil am Nachlass.
+
+    Ein Recht auf Geld, nicht auf die Immobilie selbst.
+
+    Es ist ein Schutz für Angehörige, die enterbt wurden.
+
+    Oft ein Zankapfel, aber ein wichtiger Mechanismus für Gerechtigkeit.
+
+    Wer ihn nicht kennt, verschenkt bares Geld.
+
+- image: 20.png
+  result: [0, 1, 2]
+  explanation: The detected images 0, 1 and 2 are all relevant to the post. The source (2) is optional, but here especially it is good, because it extends the bounding box so 0 is not cut off on the left side.
+  post: |
+    Daten, Daten, Daten.
+
+    Aber welche Daten sind wirklich relevant für deine Immobilienentscheidung?
+
+    Es gibt quantitative und qualitative Analysen.
+
+    Quantitativ: Das sind die harten Fakten. Zahlen, Statistiken, Preisentwicklungen. Was sich messen lässt.
+
+    Qualitativ: Das ist das weiche Zeug. Meinungen, Stimmungen, Trends. Was sich nur schwer in Zahlen fassen lässt.
+
+    Beide Perspektiven sind wichtig. Wer nur auf Zahlen schaut, übersieht oft das Wesentliche.
+
+- image: 21.png
+  result: []
+  explanation: There are 4 images here. Each one is relatively small. The post is not talking about only one of them, but the whole category. So it doesn't make sense to show only one, but rather all of them / the whole page. For that we canuse the Nano-Banana fallback pipeline.
+  post: |
+    Die Welt ist im Krisenmodus.
+
+    Und die Immobilienbranche? Die sitzt mittendrin im Auge des Sturms.
+
+    Kriege, Inflation, explodierende Energiepreise, Zinswende.
+
+    Das sind keine abstrakten Nachrichten. Das sind direkte Schläge gegen deinen Immobilienwert.
+
+    Lieferketten kollabieren, Baukosten explodieren, Kredite werden unbezahlbar.
+
+    Wer das ignoriert, spielt mit dem Feuer. Und es ist nicht nur ein kleines Lagerfeuer.
+
+- image: 22.png
+  result: [0, 1]
+  explanation: The big image is extracted correctly, without cutting off any text. Also the source is a good idea to include.
+  post: |
+    Der Klimawandel.
+
+    Die Energiewende.
+
+    Neue Mobilitätskonzepte.
+
+    Das sind keine Zukunftsvisionen, das ist die harte Realität, die deinen Immobilienwert heute schon beeinflusst.
+
+    Von Ölknappheit über Umweltzonen bis hin zu E-Ladesäulen.
+
+    Dein Haus muss sich anpassen.
+
+    Deine Immobilie muss zukunftsfähig sein.
+
+    Sonst droht nicht nur ein Wertverlust, sondern auch ein "stranded asset".
+
+    Wer jetzt nicht umdenkt, verpennt die Zeichen der Zeit.
+
+- image: 23.png
+  result: []
+  explanation: There are no images on this page. It makes sense to just attach the whole page, which we can use the Nano-Banana fallback pipeline for.
+  post: |
+    Eine Immobilie kaufen ist wie eine OP am offenen Herzen.
+
+    Du brauchst einen Röntgenblick, um keine bösen Überraschungen zu erleben.
+
+    Dieser Röntgenblick sind die Markt- und Standortanalysen.
+
+    Sie sind das Fundament für jede vernünftige Investition.
+
+    Hier geht es nicht um Bauchgefühl, sondern um knallharte Fakten, Zahlen und Prognosen.
+
+    Ohne sie fliegst du blind, direkt in die Wand.
+
+- image: 24.png
+  result: [0, 1, 2, 3]
+  explanation: HHere it is okay to choose both images (including their headings), because they are both relevant to the post. Also in this case in the bounding box that covers both of them there would be no cutoff text.
+  post: |
+    Dein Traumhaus bauen?
+    Vergiss das Budget, das du vor drei Jahren hattest.
+
+    Die Baukosten explodieren.
+
+    Materialverfügbarkeit ist ein Albtraum.
+
+    Und das ist keine kleine Delle, das ist ein Erdbeben für jeden, der bauen oder sanieren will.
+
+    Stahl?
+
+    Holz?
+
+    Dämmstoffe?
+
+    Alles teurer, alles knapper.
+
+    Das ist die Realität, die dich am Bau trifft.
+
+    Produktionsengpässe, fehlende Arbeitskräfte, Lieferkettenchaos – eine toxische Mischung, die dein Projekt verteuert und verzögert.
+
+    Wer jetzt blind startet, verbrennt Geld.
+
+- image: 25.png
+  result: [0, 1]
+  explanation: |
+    The image 0 is very relevant to the post, but it was detected incorrectly. On the left side, there is some cutoff text, which would look bad under the post. But: We can include the image 1. And because it's further on the left, it extends the bounding box so there is no cutoff text on the left side.
+  post: |
+    Manchmal wird der Immobilienmarkt als dieser magische Ort beschrieben, wo Angebot und Nachfrage immer perfekt spielen.
+
+    Pure Illusion!.
+
+    Die Realität? Es ist ein "unvollkommener Markt". Das ist keine philosophische Betrachtung, sondern eine harte Wahrheit, die deine Chancen beeinflusst.
+
+    Denk an mangelnde Transparenz. Stell dir vor, du kaufst ein Produkt, ohne alle Infos zu haben. Oder an die langsame Reaktion auf Preisänderungen. Der Immobilienmarkt ist träge, eigensinnig und voller Überraschungen. Wer das nicht versteht, stolpert. Lass dich nicht blenden.
+
+- image: 27.png
+  result: [0, 1, 2, 3]
+  explanation: The image 4 is not relevant to the post. The post only talks about "Eigenkapital oder Fremdkapital", but doesn't mention "Mezzaninekapital". Include the title and the source.
+  post: |
+    Du brauchst Geld. Aber Geld ist nicht gleich Geld.
+
+    Du stehst vor einer der wichtigsten Entscheidungen: Eigenkapital oder Fremdkapital?
+
+    Das eine ist wie dein eigenes Erspartes: sicher, aber manchmal knapp. Das andere ist wie ein Kredit: schnell verfügbar, aber mit Zins und Risiko.
+
+    Die Mischung macht's. Die falsche Mischung kann dich in den Ruin treiben.
+
+    Es ist ein Balanceakt zwischen Sicherheit und Flexibilität.
