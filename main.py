@@ -40,9 +40,6 @@ examples = [
     for item in dataset_raw
 ]
 
-# split 80/20 trainset/valset
-trainset = examples[: int(len(examples) * 0.8)]
-valset = examples[int(len(examples) * 0.8) :]
 
 # Initialize the LM
 flash = dspy.LM(
@@ -101,7 +98,7 @@ optimizer = dspy.GEPA(
 print("Optimizing program with GEPA...")
 optimized_program = optimizer.compile(
     program,
-    trainset=trainset,
+    trainset=examples,
 )
 
 # Save optimize program for future use
