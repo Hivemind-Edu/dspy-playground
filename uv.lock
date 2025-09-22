@@ -268,7 +268,7 @@ wheels = [
 [[package]]
 name = "dspy"
 version = "3.0.3"
-source = { git = "https://github.com/stanfordnlp/dspy.git?rev=main#f85e49122478ffa4ed8095b2d10d06ea6639ab89" }
+source = { git = "https://github.com/stanfordnlp/dspy.git?rev=main#b33fd0b5938fcd495a311d61b085cbf1fff71c12" }
 dependencies = [
     { name = "anyio" },
     { name = "asyncer" },
@@ -301,7 +301,6 @@ source = { virtual = "." }
 dependencies = [
     { name = "datasets" },
     { name = "dspy" },
-    { name = "gepa" },
     { name = "langfuse" },
     { name = "openinference-instrumentation-dspy" },
     { name = "py-dotenv" },
@@ -311,7 +310,6 @@ dependencies = [
 requires-dist = [
     { name = "datasets", specifier = ">=4.0.0" },
     { name = "dspy", git = "https://github.com/stanfordnlp/dspy.git?rev=main" },
-    { name = "gepa", specifier = ">=0.0.7" },
     { name = "langfuse", specifier = ">=3.5.0" },
     { name = "openinference-instrumentation-dspy", specifier = ">=0.1.29" },
     { name = "py-dotenv", specifier = ">=0.1" },

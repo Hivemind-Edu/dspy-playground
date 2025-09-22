@@ -6,7 +6,6 @@ readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
     "datasets>=4.0.0",
-    "gepa>=0.0.7",
     "langfuse>=3.5.0",
     "openinference-instrumentation-dspy>=0.1.29",
     "py-dotenv>=0.1",
