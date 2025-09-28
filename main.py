@@ -1,12 +1,14 @@
 import dspy
 import os
-import dotenv
 import base64
 
-from langfuse import get_client
-from openinference.instrumentation.dspy import DSPyInstrumentor
 
 from dspy.teleprompt.gepa.instruction_proposal import MultiModalInstructionProposer
+from openinference.instrumentation.dspy import DSPyInstrumentor
+
+from langfuse import get_client
+import dotenv
+
 
 # Import the optimizer
 import yaml
@@ -32,7 +34,7 @@ examples = [
     (
         dspy.Example(
             post=item.get("post"),
-            image=dspy.Image.from_file(f"dataset/{item.get('image')}"),
+            image=dspy.Image(url=f"dataset/{item.get('image')}"),
             result=item.get("result"),
             explanation=item.get("explanation"),
         ).with_inputs("post", "image")
@@ -45,12 +47,17 @@ examples = [
 flash = dspy.LM(
     "gemini/gemini-2.5-flash",
     api_key=os.getenv("GEMINI_API_KEY"),
-    reasoning_effort=None,
+    reasoning_effort="disable",
+    temperature=0.0,
+    max_tokens=16000,
+    cache=False,
 )
 
 pro = dspy.LM(
     "gemini/gemini-2.5-pro",
     api_key=os.getenv("GEMINI_API_KEY"),
+    max_tokens=16000,
+    cache=False,
 )
 
 
@@ -83,7 +90,7 @@ class MySignature(dspy.Signature):
 
 dspy.configure(lm=flash)
 
-program = dspy.ChainOfThought(signature=MySignature, lm=flash)
+program = dspy.Predict(signature=MySignature, lm=flash)
 
 # Initialize optimizer
 optimizer = dspy.GEPA(
