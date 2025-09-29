@@ -13,7 +13,7 @@ import dotenv
 # Import the optimizer
 import yaml
 
-DSPyInstrumentor().instrument()
+# DSPyInstrumentor().instrument()
 
 dotenv.load_dotenv()
 
@@ -45,7 +45,7 @@ examples = [
 
 # Initialize the LM
 flash = dspy.LM(
-    "gemini/gemini-2.5-flash",
+    "gemini/gemini-2.5-flash-preview-09-2025",
     api_key=os.getenv("GEMINI_API_KEY"),
     reasoning_effort="disable",
     temperature=0.0,
@@ -88,6 +88,7 @@ class MySignature(dspy.Signature):
     result: list[int] = dspy.OutputField()
 
 
+dspy.configure_cache(enable_disk_cache=False, enable_memory_cache=False)
 dspy.configure(lm=flash)
 
 program = dspy.Predict(signature=MySignature, lm=flash)

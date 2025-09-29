@@ -3,7 +3,7 @@ name = "dspy-tryout"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13.7"
+requires-python = ">=3.11.9"
 dependencies = [
     "datasets>=4.0.0",
     "dspy @ git+https://github.com/stanfordnlp/dspy.git@main",
