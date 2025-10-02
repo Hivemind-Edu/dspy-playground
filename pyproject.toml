@@ -6,8 +6,7 @@ readme = "README.md"
 requires-python = ">=3.11.9"
 dependencies = [
     "datasets>=4.0.0",
-    "dspy @ git+https://github.com/stanfordnlp/dspy.git@main",
-    "gepa[dspy]>=0.0.17",
+    "dspy @ git+https://github.com/stanfordnlp/dspy.git@c1c27b4",
     "langfuse>=3.5.0",
     "litellm==1.75.9",
     "openinference-instrumentation-dspy>=0.1.29",
